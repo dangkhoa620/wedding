@@ -5,7 +5,7 @@ import { AudioButton } from './components/AudioButton';
 import { Event } from './components/Event';
 import { Home } from './components/Home';
 import { Nav } from './components/Nav';
-import { Story } from './components/Story';
+// import { Story } from './components/Story';
 import { TheDate } from './components/TheDate';
 import { Us } from './components/Us';
 import theme from './theme';
