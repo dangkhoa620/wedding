@@ -1,0 +1,46 @@
+{
+  "general": {
+    "groomFullName": "Khoa Le",
+    "brideFullName": "Anh Nguyen",
+    "groomInitial": "K",
+    "brideInitial": "A",
+    "groomFriendlyName": "Khoa Le",
+    "brideFriendlyName": "Anh Nguyen",
+    "turnOnMusic": "Turn on music",
+    "turnOffMusic": "Turn off music",
+    "groomFirstName": "Khoa",
+    "brideFirstName": "Anh",
+    "date": "May 1st, 2025",
+    "d": "Days",
+    "h": "Hours",
+    "m": "Minutes",
+    "s": "Seconds"
+  },
+  "nav": {
+    "vi": "Vie",
+    "en": "Eng"
+  },
+  "couple": {
+    "title": "About us"
+  },
+  "story": {
+    "title": "Our story"
+  },
+  "album": {
+    "title": "Album"
+  },
+  "theDate": {
+    "title": "The Big Day",
+    "body": "We are so happy to see and welcome you on our wedding day. We are truly grateful and delighted for your presence and heartfelt wishes. Thank you so much!"
+  },
+  "event": {
+    "title": "Events",
+    "engagement": "Engagement",
+    "wedding": {
+      "bride": "Wedding (on Bride's side)",
+      "brideAddress": "346, Trung hamlet, Tan Long, Thanh Binh, Dong Thap",
+      "groom": "Wedding (on Groom's side)",
+      "groomAdress": "1178, Tan Thanh hamlet, Tan Long, Thanh Binh, Dong Thap"
+    }
+  }
+}

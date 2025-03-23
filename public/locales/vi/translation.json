@@ -1,0 +1,46 @@
+{
+  "general": {
+    "groomFullName": "Lê Trần Đăng Khoa",
+    "brideFullName": "Nguyễn Mỹ Anh",
+    "groomInitial": "K",
+    "brideInitial": "A",
+    "groomFriendlyName": "Đăng Khoa",
+    "brideFriendlyName": "Mỹ Anh",
+    "turnOnMusic": "Bật nhạc",
+    "turnOffMusic": "Tắt nhạc",
+    "groomFirstName": "Khoa",
+    "brideFirstName": "Anh",
+    "date": "01 Tháng 5 2025",
+    "d": "Ngày",
+    "h": "Giờ",
+    "m": "Phút",
+    "s": "Giây"
+  },
+  "nav": {
+    "vi": "Vie",
+    "en": "Eng"
+  },
+  "couple": {
+    "title": "Hai đứa mình"
+  },
+  "story": {
+    "title": "Chuyện chúng mình"
+  },
+  "album": {
+    "title": "Album"
+  },
+  "theDate": {
+    "title": "The Big Day",
+    "body": "Chúng tôi rất vui khi được đón tiếp mọi người trong ngày đặc biệt này. Chúng tôi vô cùng biết ơn và hạnh phúc vì sự hiện diện và những lời chúc tốt đẹp của mọi người. Cảm ơn mọi người rất nhiều!"
+  },
+  "event": {
+    "title": "Sự kiện cưới",
+    "engagement": "Lễ Đính Hôn",
+    "wedding": {
+      "bride": "Lễ Vu Quy",
+      "brideAddress": "346, ấp Trung, Tân Quới, Thanh Bình, Đồng Tháp",
+      "groom": "Lễ Tân Hôn",
+      "groomAdress": "1178, ấp Tân Thạnh, Tân Long, Thanh Bình, Đồng Tháp"
+    }
+  }
+}

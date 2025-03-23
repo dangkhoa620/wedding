@@ -1,0 +1,76 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html{
+  font-size: 12px;
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #eee;
+  font-family:  "Marmelad", serif;
+  font-size: 14px;
+  color: #000;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #d6d6d6;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(238 210 180);
+  transition: 0.2s;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(226 121 86);
+}
+
+img{
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+section{
+  display: flex;
+  justify-content: center;
+}
+
+.section-content{
+  max-width: 1200px;
+  width: 100%;
+}
+
+.section-content:not(.no-padding){
+  padding: 20px;
+}
+
+@keyframes backgroundZoom {
+  0% {
+    background-size: 100%;
+  }
+  100% {
+    background-size: 120%;
+  }
+}
+
+.lang-icon{
+  width: 30px;
+  height: 30px;
+}
