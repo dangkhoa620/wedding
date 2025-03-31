@@ -4,13 +4,24 @@
   padding: 0;
 }
 
+@property --gap{
+  syntax: '<length>';
+  inherits: true;
+  initial-value: 0;
+}
+@property --angle{
+  syntax: '<angle>';
+  inherits: true;
+  initial-value: 0deg;
+}
+
 html{
   font-size: 12px;
   scroll-behavior: smooth;
 }
 
 body {
-  background: #eee;
+  background: #fff;
   font-family:  "Marmelad", serif;
   font-size: 14px;
   color: #000;
@@ -32,13 +43,13 @@ body {
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: rgb(238 210 180);
-  transition: 0.2s;
+  background: #FFA5BA;
+  transition: 2s;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: rgb(226 121 86);
+  background: #EC4B72;
 }
 
 img{
@@ -50,6 +61,7 @@ img{
 section{
   display: flex;
   justify-content: center;
+  min-height: 100vh;
 }
 
 .section-content{

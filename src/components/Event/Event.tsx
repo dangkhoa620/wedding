@@ -7,6 +7,8 @@ import PlaceIcon from '@mui/icons-material/Place';
 import { Box, Stack } from '@mui/material';
 import Typography from '@mui/material/Typography';
 
+import { SectionTitle } from '../SectionTitle';
+
 const Event = () => {
   const { t } = useTranslation();
 
@@ -22,12 +24,16 @@ const Event = () => {
         title: t('event.wedding.bride'),
         time: '09:00',
         address: t('event.wedding.brideAddress'),
+        image: './assets/map-bride.png',
+        map: '',
       },
       {
         date: '01/05/2025',
         title: t('event.wedding.groom'),
         time: '09:00',
         address: t('event.wedding.groomAdress'),
+        image: './assets/map-groom.png',
+        map: '',
       },
     ],
     [t],
@@ -41,152 +47,128 @@ const Event = () => {
         width: '100vw',
         height: '90vh',
         position: 'relative',
-        justifyContent: 'flex-start',
+        justifyContent: 'center',
       }}
     >
-      <Box
-        sx={{
-          position: 'absolute',
-          top: 0,
-          left: 0,
-          backgroundImage: 'url(./assets/album/006.jpg)',
-          backgroundAttachment: 'fixed',
-          backgroundSize: '100% ',
-          backgroundRepeat: 'no-repeat',
-          backgroundPosition: 'center',
-          animation: 'backgroundZoom 10s infinite alternate ease-in-out',
-          width: '100%',
-          height: '100%',
-          clipPath: 'polygon(0 15, 100% 0%, 100% 100, 0 100%)',
-          overflow: 'hidden',
-          '::after': {
-            position: 'absolute',
-            content: '""',
-            top: 0,
-            left: 0,
-            height: '100%',
-            width: '100%',
-            backgroundColor: '#c2b6a9',
-            opacity: 0.5,
-          },
-        }}
-      ></Box>
       <Box
         className="section-content no-padding"
         sx={{
           display: 'flex',
-          alignItems: 'flex-start',
+          alignItems: 'center',
           flexDirection: 'column',
           position: 'relative',
           padding: '5rem',
           width: '100%',
         }}
       >
+        <SectionTitle title={t('event.title')}></SectionTitle>
         <Stack
           sx={{
-            backgroundColor: PALETTE.MAIN_BLUR,
-            padding: '3rem',
             gap: '3rem',
           }}
+          direction="row"
+          flexWrap="wrap"
+          justifyContent="center"
         >
-          <Typography
-            variant="h2"
-            component="h2"
-            sx={{
-              color: '#fff',
-              textAlign: 'center',
-            }}
-          >
-            {t('event.title')}
-          </Typography>
-          <Stack
-            sx={{
-              gap: '1.5rem',
-            }}
-          >
-            {events.map((item) => {
-              return (
+          {events.map((item) => {
+            return (
+              <Box
+                key={item.title}
+                sx={{
+                  backgroundColor: '#fff',
+                  padding: '3rem',
+                  maxWidth: '400px',
+                }}
+              >
                 <Box
                   sx={{
-                    backgroundColor: '#fff',
-                    padding: '2rem',
+                    position: 'relative',
                   }}
                 >
-                  <Box
+                  <Stack
+                    gap="1rem"
                     sx={{
+                      padding: '3rem',
+                      zIndex: 2,
                       position: 'relative',
                     }}
                   >
-                    <Stack
-                      gap="1rem"
+                    <Box
+                      component="img"
+                      src={item.image}
                       sx={{
-                        padding: '2rem',
+                        cursor: 'pointer',
+                      }}
+                      onClick={() => {
+                        console.log('Click');
+                        window.open(item.map, '_blank');
+                      }}
+                    ></Box>
+                    <Typography
+                      variant="h4"
+                      sx={{
+                        color: PALETTE.MAIN,
+                        fontWeight: 'normal',
                       }}
                     >
+                      {item.title}
+                    </Typography>
+                    <Stack direction="row" alignItems="center" gap="0.5rem">
+                      <CalendarMonthIcon />
                       <Typography
-                        variant="h4"
+                        variant="h6"
                         sx={{
-                          color: PALETTE.MAIN,
                           fontWeight: 'normal',
                         }}
                       >
-                        {item.title}
+                        {item.time} {item.date}
                       </Typography>
-                      <Stack direction="row" alignItems="center" gap="0.5rem">
-                        <CalendarMonthIcon />
-                        <Typography
-                          variant="h6"
-                          sx={{
-                            fontWeight: 'normal',
-                          }}
-                        >
-                          {item.time} {item.date}
-                        </Typography>
-                      </Stack>
-                      <Stack direction="row" alignItems="center" gap="0.5rem">
-                        <PlaceIcon />
-                        <Typography
-                          variant="h6"
-                          sx={{
-                            fontWeight: 'normal',
-                          }}
-                        >
-                          {item.address}
-                        </Typography>
-                      </Stack>
                     </Stack>
-                    <Box
-                      component="span"
-                      sx={{
-                        position: 'absolute',
-                        width: 'calc(100% + 20px)',
-                        height: '100%',
-                        border: '2px solid',
-                        borderColor: PALETTE.MAIN,
-                        opacity: 0.3,
-                        display: 'block',
-                        left: '-10px',
-                        top: 0,
-                      }}
-                    ></Box>
-                    <Box
-                      component="span"
-                      sx={{
-                        position: 'absolute',
-                        width: '100%',
-                        height: 'calc(100% + 20px)',
-                        top: '-10px',
-                        border: '2px solid',
-                        borderColor: PALETTE.MAIN,
-                        opacity: 0.3,
-                        display: 'block',
-                      }}
-                    ></Box>
-                  </Box>
+                    <Stack direction="row" alignItems="center" gap="0.5rem">
+                      <PlaceIcon />
+                      <Typography
+                        variant="h6"
+                        sx={{
+                          fontWeight: 'normal',
+                        }}
+                      >
+                        {item.address}
+                      </Typography>
+                    </Stack>
+                  </Stack>
+                  <Box
+                    component="span"
+                    sx={{
+                      position: 'absolute',
+                      width: 'calc(100% + 20px)',
+                      height: '100%',
+                      border: '2px solid',
+                      borderColor: PALETTE.MAIN,
+                      opacity: 0.3,
+                      display: 'block',
+                      left: '-10px',
+                      top: 0,
+                      zIndex: 1,
+                    }}
+                  ></Box>
+                  <Box
+                    component="span"
+                    sx={{
+                      position: 'absolute',
+                      width: '100%',
+                      height: 'calc(100% + 20px)',
+                      top: '-10px',
+                      border: '2px solid',
+                      borderColor: PALETTE.MAIN,
+                      opacity: 0.3,
+                      display: 'block',
+                      zIndex: 1,
+                    }}
+                  ></Box>
                 </Box>
-              );
-            })}
-          </Stack>
+              </Box>
+            );
+          })}
         </Stack>
       </Box>
     </Box>

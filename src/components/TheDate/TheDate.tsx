@@ -8,13 +8,23 @@ import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
 import { DateCalendar } from '@mui/x-date-pickers/DateCalendar';
 import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
 
+import { SectionTitle } from '../SectionTitle';
 import Countdown from './Countdown';
 
 const TheDate = () => {
   const { t } = useTranslation();
 
   return (
-    <Box component="section" id="the-date">
+    <Box
+      component="section"
+      id="the-date"
+      sx={{
+        width: '100vw',
+        height: '90vh',
+        position: 'relative',
+        justifyContent: 'center',
+      }}
+    >
       <Box
         className="section-content"
         sx={{
@@ -22,7 +32,6 @@ const TheDate = () => {
           justifyContent: 'center',
           alignItems: 'center',
           flexDirection: 'column',
-          gap: '2rem',
           '.MuiPickersDay-root': {
             '&.Mui-selected': {
               opacity: '1  !important',
@@ -38,9 +47,7 @@ const TheDate = () => {
           },
         }}
       >
-        <Typography variant="h2" component="h2">
-          {t('theDate.title')}
-        </Typography>
+        <SectionTitle title={t('theDate.title')} />
         <Box
           sx={{
             marginTop: '2rem',

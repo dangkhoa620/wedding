@@ -13,18 +13,18 @@ import useScrollTrigger from '@mui/material/useScrollTrigger';
 import { LanguageSwitcher } from '../LanguageSwitcher';
 
 const NAV_ITEMS = [
-  {
-    title: 'couple.title',
-    href: '#couple',
-  },
-  {
-    title: 'story.title',
-    href: '#story',
-  },
-  {
-    title: 'album.title',
-    href: '#album',
-  },
+  // {
+  //   title: 'couple.title',
+  //   href: '#couple',
+  // },
+  // {
+  //   title: 'story.title',
+  //   href: '#story',
+  // },
+  // {
+  //   title: 'album.title',
+  //   href: '#album',
+  // },
 ];
 
 const Nav = () => {

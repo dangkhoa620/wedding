@@ -39,9 +39,9 @@ const AudioButton = () => {
           bottom: '3rem',
           left: '3rem',
           zIndex: 900,
-          backgroundColor: '#ff855c',
-
+          backgroundColor: PALETTE.MAIN_LIGHT,
           color: 'white',
+          boxShadow: 3,
           '&:hover': {
             backgroundColor: PALETTE.MAIN,
           },

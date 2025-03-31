@@ -1,6 +1,6 @@
-export const imagesArray = Array.from({ length: 15 }).map((_, index) => {
+export const imagesArray = Array.from({ length: 8 }).map((_, index) => {
   return {
-    name: (index + 2).toString().padStart(3, '0'),
+    name: (index + 1).toString().padStart(3, '0'),
     url: `/assets/album/${(index + 1).toString().padStart(3, '0')}.jpg`,
   };
 });
@@ -24,7 +24,9 @@ export const BRIDE_INITIAL = BRIDE_LAST_NAME[0];
 
 export const PALETTE = {
   MAIN: '#EC4B72',
+  MAIN_LIGHT: '#FFA5BA',
   MAIN_BLUR: 'rgba(255, 165, 186, 0.7)',
+  TYPOGRAPHY: '#767878',
 };
 
 export const THE_DATE = new Date(new Date('2025-05-01').setHours(9));

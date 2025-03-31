@@ -9,6 +9,7 @@ import ImageList from '@mui/material/ImageList';
 import ImageListItem from '@mui/material/ImageListItem';
 
 import { ImageViewer } from '../ImageViewer';
+import { SectionTitle } from '../SectionTitle';
 
 const Album = () => {
   const { isLG } = useBreakpoints();
@@ -29,18 +30,16 @@ const Album = () => {
           justifyContent: 'center',
           alignItems: 'center',
           flexDirection: 'column',
-          gap: '2rem',
         }}
       >
-        <Typography variant="h2" component="h2">
-          {t('album.title')}
-        </Typography>
+        <SectionTitle title={t('album.title')} />
         <ImageList
           variant="masonry"
           cols={isLG ? 4 : 3}
           gap={20}
           sx={{
             marginTop: '2rem',
+            padding: '4rem 6rem',
           }}
         >
           {images.map((item, index) => (
