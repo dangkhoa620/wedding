@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next';
 
 import { PALETTE } from '@/constant';
 import FavoriteIcon from '@mui/icons-material/Favorite';
-import { Button, Stack } from '@mui/material';
+import { Stack } from '@mui/material';
 import AppBar from '@mui/material/AppBar';
 import Slide from '@mui/material/Slide';
 import Toolbar from '@mui/material/Toolbar';
@@ -12,20 +12,20 @@ import useScrollTrigger from '@mui/material/useScrollTrigger';
 
 import { LanguageSwitcher } from '../LanguageSwitcher';
 
-const NAV_ITEMS = [
-  // {
-  //   title: 'couple.title',
-  //   href: '#couple',
-  // },
-  // {
-  //   title: 'story.title',
-  //   href: '#story',
-  // },
-  // {
-  //   title: 'album.title',
-  //   href: '#album',
-  // },
-];
+// const NAV_ITEMS = [
+//   {
+//     title: 'couple.title',
+//     href: '#couple',
+//   },
+//   {
+//     title: 'story.title',
+//     href: '#story',
+//   },
+//   {
+//     title: 'album.title',
+//     href: '#album',
+//   },
+// ];
 
 const Nav = () => {
   const trigger = useScrollTrigger();
@@ -67,7 +67,7 @@ const Nav = () => {
             spacing={2}
             sx={{ display: { xs: 'none', sm: 'flex' } }}
           >
-            {NAV_ITEMS.map((item) => (
+            {/* {NAV_ITEMS.map((item) => (
               <Button
                 key={item.title}
                 href={item.href}
@@ -81,7 +81,7 @@ const Nav = () => {
               >
                 {t(item.title)}
               </Button>
-            ))}
+            ))} */}
             <LanguageSwitcher></LanguageSwitcher>
           </Stack>
         </Toolbar>
