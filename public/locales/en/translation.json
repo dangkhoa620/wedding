@@ -22,8 +22,9 @@
   },
   "couple": {
     "title": "About us",
-    "bride": "là một cô gái luôn cố gắng trong công việc và cuộc sống, thực tế và có chút điềm tĩnh. Dù đôi khi có những thử thách riêng, tôi luôn hướng về phía trước với sự kiên trì và tự lập.",
-    "groom": "là một chàng trai tràn đầy năng lượng, luôn nhiệt huyết trong công việc và cuộc sống. Tôi sống lạc quan, thích khám phá những điều mới mẻ và luôn sẵn sàng đón nhận thử thách."
+
+    "bride": " a practical and resilient woman who always strives to do my best in work and life. Although I may seem calm on the outside, I carry a determined spirit within and am always moving forward, no matter the challenges.",
+    "groom": "a man full of energy, always passionate about work and life. I live optimistically, enjoy exploring new things, and am always ready to embrace challenges"
   },
   "story": {
     "title": "Our story"
@@ -40,7 +41,7 @@
     "engagement": "Engagement",
     "wedding": {
       "bride": "Wedding (on Bride's side)",
-      "brideAddress": "346, Trung hamlet, Tan Long, Thanh Binh, Dong Thap",
+      "brideAddress": "346, Trung hamlet, Tan Quoi, Thanh Binh, Dong Thap",
       "groom": "Wedding (on Groom's side)",
       "groomAdress": "1178, Tan Thanh hamlet, Tan Long, Thanh Binh, Dong Thap"
     }

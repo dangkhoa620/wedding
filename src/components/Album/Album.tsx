@@ -3,7 +3,6 @@ import { useTranslation } from 'react-i18next';
 
 import { imagesArray } from '@/constant';
 import useBreakpoints from '@/hooks/useBreakpoints';
-import { Typography } from '@mui/material';
 import Box from '@mui/material/Box';
 import ImageList from '@mui/material/ImageList';
 import ImageListItem from '@mui/material/ImageListItem';
@@ -39,7 +38,7 @@ const Album = () => {
           gap={20}
           sx={{
             marginTop: '2rem',
-            padding: '4rem 6rem',
+            padding: '2rem 3rem',
           }}
         >
           {images.map((item, index) => (

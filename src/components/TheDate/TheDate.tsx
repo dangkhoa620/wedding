@@ -20,7 +20,6 @@ const TheDate = () => {
       id="the-date"
       sx={{
         width: '100vw',
-        height: '90vh',
         position: 'relative',
         justifyContent: 'center',
       }}

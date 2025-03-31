@@ -12,7 +12,6 @@ const Footer = () => {
         sx={{
           backgroundColor: PALETTE.MAIN_LIGHT,
           color: '#fff',
-          padding: '5rem',
         }}
       >
         <Typography

@@ -45,7 +45,6 @@ const Event = () => {
       id="event"
       sx={{
         width: '100vw',
-        height: '90vh',
         position: 'relative',
         justifyContent: 'center',
       }}
@@ -57,14 +56,14 @@ const Event = () => {
           alignItems: 'center',
           flexDirection: 'column',
           position: 'relative',
-          padding: '5rem',
           width: '100%',
         }}
       >
         <SectionTitle title={t('event.title')}></SectionTitle>
         <Stack
           sx={{
-            gap: '3rem',
+            columnGap: '3rem',
+            rowGap: '1rem',
           }}
           direction="row"
           flexWrap="wrap"
