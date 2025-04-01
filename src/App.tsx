@@ -3,9 +3,10 @@ import { Stack, ThemeProvider } from '@mui/material';
 import { Album } from './components/Album';
 import { AudioButton } from './components/AudioButton';
 import { Event } from './components/Event';
-import { Footer } from './components/Footer';
+// import { Footer } from './components/Footer';
 import { Home } from './components/Home';
 import { Nav } from './components/Nav';
+// import Petal from './components/Petal/Petal';
 // import { Story } from './components/Story';
 import { TheDate } from './components/TheDate';
 import { Us } from './components/Us';
@@ -25,7 +26,8 @@ function App() {
         <Event></Event>
         <AudioButton></AudioButton>
       </Stack>
-      <Footer />
+      {/* <Footer /> */}
+      {/* <Petal /> */}
     </ThemeProvider>
   );
 }

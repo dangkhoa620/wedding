@@ -60,13 +60,7 @@ const Nav = () => {
             <span>{t('general.groomInitial')}</span> <FavoriteIcon></FavoriteIcon>{' '}
             <span>{t('general.brideInitial')}</span>
           </Typography>
-          <Stack
-            direction="row"
-            alignItems="center"
-            useFlexGap
-            spacing={2}
-            sx={{ display: { xs: 'none', sm: 'flex' } }}
-          >
+          <Stack direction="row" alignItems="center" useFlexGap spacing={2} sx={{ display: 'flex' }}>
             {/* {NAV_ITEMS.map((item) => (
               <Button
                 key={item.title}

@@ -12,8 +12,8 @@ i18n
   .use(LanguageDetector)
   .use(initReactI18next)
   .init({
-    lng: 'en',
-    fallbackLng: 'en',
+    lng: 'vi',
+    fallbackLng: 'vi',
     supportedLngs: Object.keys(supportedLanguages),
   });
 

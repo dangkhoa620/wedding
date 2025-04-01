@@ -7,7 +7,12 @@ import { Box, Typography } from '@mui/material';
 const Footer = () => {
   const { t } = useTranslation();
   return (
-    <Box>
+    <Box
+      sx={{
+        position: 'relative',
+        overflow: 'hidden',
+      }}
+    >
       <Box
         sx={{
           backgroundColor: PALETTE.MAIN_LIGHT,
