@@ -29,4 +29,5 @@ export const PALETTE = {
   TYPOGRAPHY: '#767878',
 };
 
-export const THE_DATE = new Date(new Date('2025-05-01').setHours(9));
+export const GROOM_DATE = new Date(new Date('2025-05-01').setHours(9));
+export const BRIDE_DATE = new Date(new Date('2025-04-30').setHours(9));

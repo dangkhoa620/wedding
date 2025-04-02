@@ -1,14 +1,12 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 
-import { Box, Stack, Typography } from '@mui/material';
-import Grid from '@mui/material/Grid2';
+import { Box, Stack } from '@mui/material';
 
-import { Paragraph } from '../Paragraph';
 import { SectionTitle } from '../SectionTitle';
 import Profile from './Profile';
 
-const Us = () => {
+const Us = ({ isBride }: { isBride?: boolean }) => {
   const { t } = useTranslation();
 
   return (
@@ -28,7 +26,13 @@ const Us = () => {
         }}
       >
         <SectionTitle title={t('couple.title')} />
-        <Stack direction="row" useFlexGap gap={3} sx={{}} flexWrap="wrap" justifyContent="center">
+        <Stack
+          direction={isBride ? 'row-reverse' : 'row'}
+          useFlexGap
+          gap={3}
+          flexWrap={isBride ? 'wrap-reverse' : 'wrap'}
+          justifyContent="center"
+        >
           <Profile
             avatar="./assets/howl-art.jpg"
             name={t('general.groomFriendlyName')}

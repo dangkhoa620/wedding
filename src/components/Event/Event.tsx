@@ -9,16 +9,11 @@ import Typography from '@mui/material/Typography';
 
 import { SectionTitle } from '../SectionTitle';
 
-const Event = () => {
+const Event = ({ isBride }: { isBride?: boolean }) => {
   const { t } = useTranslation();
 
-  const events = useMemo(
-    () => [
-      // {
-      //   date: '05/01/2025',
-      //   title: t('event.engagement'),
-      //   time: '09:00',
-      // },
+  const events = useMemo(() => {
+    const result = [
       {
         date: '30/04/2025',
         title: t('event.wedding.bride'),
@@ -35,9 +30,10 @@ const Event = () => {
         image: './assets/map-groom.png',
         map: '',
       },
-    ],
-    [t],
-  );
+    ];
+
+    return result.filter((_item, index) => index !== Number(!!isBride));
+  }, [t, isBride]);
 
   return (
     <Box

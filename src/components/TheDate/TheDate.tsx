@@ -2,7 +2,7 @@ import dayjs from 'dayjs';
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 
-import { PALETTE, THE_DATE } from '@/constant';
+import { BRIDE_DATE, GROOM_DATE, PALETTE } from '@/constant';
 import { Box, Stack, Typography } from '@mui/material';
 import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
 import { DateCalendar } from '@mui/x-date-pickers/DateCalendar';
@@ -11,7 +11,7 @@ import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
 import { SectionTitle } from '../SectionTitle';
 import Countdown from './Countdown';
 
-const TheDate = () => {
+const TheDate = ({ isBride }: { isBride?: boolean }) => {
   const { t } = useTranslation();
 
   return (
@@ -94,7 +94,7 @@ const TheDate = () => {
                 }}
               ></Box>
               <LocalizationProvider dateAdapter={AdapterDayjs}>
-                <DateCalendar disabled defaultValue={dayjs('2025-05-01')} />
+                <DateCalendar disabled defaultValue={isBride ? dayjs('2025-04-30') : dayjs('2025-05-01')} />
               </LocalizationProvider>
             </Stack>
             <Stack
@@ -104,14 +104,26 @@ const TheDate = () => {
               }}
               spacing={2}
             >
-              <Typography
-                variant="h3"
-                sx={{
-                  textAlign: 'center',
-                }}
-              >
-                {t('general.groomFirstName')} & {t('general.brideFirstName')}
-              </Typography>
+              {isBride ? (
+                <Typography
+                  variant="h3"
+                  sx={{
+                    textAlign: 'center',
+                  }}
+                >
+                  {t('general.brideFirstName')} & {t('general.groomFirstName')}
+                </Typography>
+              ) : (
+                <Typography
+                  variant="h3"
+                  sx={{
+                    textAlign: 'center',
+                  }}
+                >
+                  {t('general.groomFirstName')} & {t('general.brideFirstName')}
+                </Typography>
+              )}
+
               <Typography
                 variant="h6"
                 sx={{
@@ -154,7 +166,7 @@ const TheDate = () => {
                     fontWeight: '400',
                   }}
                 >
-                  {t('general.date')}
+                  {isBride ? t('general.brideDate') : t('general.groomDate')}
                 </Typography>
                 <Box
                   component="span"
@@ -183,7 +195,7 @@ const TheDate = () => {
                   }}
                 ></Box>
                 <Box>
-                  <Countdown datetime={THE_DATE.toISOString()} />
+                  <Countdown datetime={isBride ? BRIDE_DATE.toISOString() : GROOM_DATE.toISOString()} />
                 </Box>
               </Stack>
             </Stack>

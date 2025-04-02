@@ -1,33 +1,16 @@
-import { Stack, ThemeProvider } from '@mui/material';
+import { BrowserRouter } from 'react-router-dom';
 
-import { Album } from './components/Album';
-import { AudioButton } from './components/AudioButton';
-import { Event } from './components/Event';
-// import { Footer } from './components/Footer';
-import { Home } from './components/Home';
-import { Nav } from './components/Nav';
-// import Petal from './components/Petal/Petal';
-// import { Story } from './components/Story';
-import { TheDate } from './components/TheDate';
-import { Us } from './components/Us';
+import { ThemeProvider } from '@mui/material';
+
+import AppRoute from './routes/AppRoute';
 import theme from './theme';
 
 function App() {
   return (
     <ThemeProvider theme={theme}>
-      <Stack direction="column" spacing={5} useFlexGap sx={{}}>
-        <Nav></Nav>
-        <Home></Home>
-        <Us></Us>
-        <TheDate></TheDate>
-
-        {/* <Story></Story> */}
-        <Album></Album>
-        <Event></Event>
-        <AudioButton></AudioButton>
-      </Stack>
-      {/* <Footer /> */}
-      {/* <Petal /> */}
+      <BrowserRouter>
+        <AppRoute />
+      </BrowserRouter>
     </ThemeProvider>
   );
 }

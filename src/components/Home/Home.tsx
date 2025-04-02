@@ -4,7 +4,7 @@ import { Box, Divider, Typography } from '@mui/material';
 
 import { Parallax } from '../Parallax';
 
-const Home = () => {
+const Home = ({ date, isBride }: { date: string; isBride?: boolean }) => {
   const { t } = useTranslation();
 
   return (
@@ -33,11 +33,18 @@ const Home = () => {
         className="section-content"
       >
         <Typography variant="h4">Save the date</Typography>
-        <Typography variant="h1">
-          {t('general.groomFriendlyName')} & {t('general.brideFriendlyName')}
-        </Typography>
+        {isBride ? (
+          <Typography variant="h1">
+            {t('general.brideFriendlyName')} & {t('general.groomFriendlyName')}
+          </Typography>
+        ) : (
+          <Typography variant="h1">
+            {t('general.groomFriendlyName')} & {t('general.brideFriendlyName')}
+          </Typography>
+        )}
+
         <Divider sx={{ width: '20rem', height: '2px', backgroundColor: 'white' }} />
-        <Typography variant="h4">01/05/2025</Typography>
+        <Typography variant="h4">{date}</Typography>
       </Box>
     </Box>
   );
