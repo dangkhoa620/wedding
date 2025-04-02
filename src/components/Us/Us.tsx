@@ -33,16 +33,8 @@ const Us = ({ isBride }: { isBride?: boolean }) => {
           flexWrap={isBride ? 'wrap-reverse' : 'wrap'}
           justifyContent="center"
         >
-          <Profile
-            avatar="./assets/howl-art.jpg"
-            name={t('general.groomFriendlyName')}
-            description={t('couple.groom')}
-          />
-          <Profile
-            avatar="./assets/sophie-art (1).jpg"
-            name={t('general.brideFriendlyName')}
-            description={t('couple.bride')}
-          />
+          <Profile avatar="./assets/groom.jpg" name={t('general.groomFriendlyName')} description={t('couple.groom')} />
+          <Profile avatar="./assets/bride.jpg" name={t('general.brideFriendlyName')} description={t('couple.bride')} />
         </Stack>
       </Box>
     </Box>
