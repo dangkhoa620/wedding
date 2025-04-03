@@ -20,7 +20,7 @@ const Event = ({ isBride }: { isBride?: boolean }) => {
         time: '09:00',
         address: t('event.wedding.brideAddress'),
         image: './assets/map-bride.png',
-        map: '',
+        map: 'https://maps.app.goo.gl/VLqpgu1r5aULBmC16',
       },
       {
         date: '01/05/2025',
@@ -28,7 +28,7 @@ const Event = ({ isBride }: { isBride?: boolean }) => {
         time: '09:00',
         address: t('event.wedding.groomAdress'),
         image: './assets/map-groom.png',
-        map: '',
+        map: 'https://maps.app.goo.gl/se4Kyhy71r8BNvcQ7',
       },
     ];
 

@@ -5,6 +5,7 @@ import { AudioButton } from '@/components/AudioButton';
 import { Event } from '@/components/Event';
 import { Home } from '@/components/Home';
 import { Nav } from '@/components/Nav';
+// import Petal from '@/components/Petal/Petal';
 import { TheDate } from '@/components/TheDate';
 import { Us } from '@/components/Us';
 import { Stack } from '@mui/material';
@@ -19,6 +20,7 @@ const Groom = () => {
       <Album></Album>
       <Event></Event>
       <AudioButton></AudioButton>
+      {/* <Petal></Petal>s */}
     </Stack>
   );
 };
